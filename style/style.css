@@ -1,0 +1,546 @@
+@charset "utf-8";
+/*@import url('https://fonts.googleapis.com/css2?family=Armata&family=Changa:wght@200;300;400;500;600;700;800&family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Goldman:wght@400;700&family=Play:wght@400;700&family=Rajdhani:wght@300;400;500;600;700&family=Saira:wght@100;200;300;400;500;600;700;800;900&family=Sunflower:wght@300;500;700&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');*/
+/* CSS Document */
+/*font-family: 'Armata', sans-serif;
+font-family: 'Changa', sans-serif;
+font-family: 'Exo', sans-serif;
+font-family: 'Goldman', cursive;
+font-family: 'Play', sans-serif;
+font-family: 'Rajdhani', sans-serif;
+font-family: 'Saira', sans-serif;
+font-family: 'Sunflower', sans-serif;
+font-family: 'Tomorrow', sans-serif;*/
+/* ALLGEMEINES */
+* {
+  font-family: "Saira", "Roboto", Segoe UI, Helvetica Neue, Arial, sans-serif;
+  box-sizing: border-box;
+}
+#container {
+  max-width: 1280px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+body {
+  background-color: #d0d0d0;
+  margin: 128px 0 0 0;
+  /*background-image: url("https://i.postimg.cc/9M2xQYcm/Hintergrund.png")*/
+}
+wrapper {
+	min-height: 100%;
+	margin: 0;
+}
+
+.parallax { 
+	background-image: url("../images/Bild_5.png");
+	min-height: 200px; 
+	background-attachment: fixed; 
+	background-position: center; 
+	background-repeat: no-repeat; 
+	background-size: cover; 
+} 
+/* NAVIGATION */
+#navlinks {
+  margin: 0;
+}
+ul {
+  color: black;
+  list-style: none;
+  float: right;
+  margin-right: 1rem;
+  padding-top: 2.25%;
+}
+ul li {
+  display: inline-table;
+  margin-left: 0.25rem;
+  padding: 0.25rem;
+  border-bottom: 2px solid;
+  border-bottom-color: white;
+}
+ul li a {
+  color: black;
+  text-decoration: none;
+  padding: 0.6rem;
+}
+/*
+ul li a:hover {
+  color: white;
+  transition: 0.4s;
+  text-decoration: none;
+}*/
+#logo {
+  margin-left: 1rem;
+}
+.logo:hover {
+  opacity: 0.5;
+  transition: 0.3s;
+}
+/* Smart Navbar / weiß, wo man auf der Seite ist von https://stackoverflow.com/questions/19697696/change-underline-of-active-nav-by-section */
+#navbar.fix {
+  position: fixed;
+  top: 0;
+}
+#navbar li.active {
+  border-bottom: 2px solid;
+  border-bottom-color: #0077b6;
+  color: black !important;
+  /*f6bd60*/
+}
+#navbar li.active a {
+  /*color: #f6bd60 !important;*/
+  /*f6bd60*/
+}
+/* Smart Navbar Ende */
+/* fixed Navigation / Shrink Animation von https://codepen.io/malZiiirA/pen/cbfED?css-preprocessor=none */
+#navbar {
+  border-bottom-style: solid;
+  border-bottom-width: 1.25px;
+  box-shadow: 0px 2.5px 5px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  height: 128px;
+  transition: 0.32s;
+  position: fixed;
+  top: 0;
+  width: 1280px;
+  z-index: 5;
+}
+#navbar.shrink {
+  height: 80px;
+  line-height: 18px;
+}
+#navbar li {
+  font-size: 1.2rem;
+  font-weight: 450 !important;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+#navbar.shrink li {
+  font-size: 1.2rem;
+  margin-top: -30px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+#navbar img {
+  height: 128px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+#navbar.shrink img {
+  height: 80px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  margin: auto;
+}
+/* NAVIGATION ENDE */
+/* MAIN */
+.bildschrift {
+  position: absolute;
+  margin: 0;
+  left: 30px;
+  right: 0;
+  text-align: left;
+  top: 37%; /* Adjust this value to move the positioned div up and down */
+  color: #fff;
+  text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.16);
+  font-size: 75px;
+}
+h1 {
+  margin: 0;
+}
+h2 {
+  font-weight: 600;
+  color: #5AA5D9;
+  font-size: 50px;
+  margin: 0;
+}
+h3 {
+  font-weight: 600;
+  color: #0d0d0d;
+  font-size: 1.6em;
+  margin: 0;
+}
+p {
+  font-weight: 400;
+  color: #0d0d0d;
+  font-size: 1.2em;
+  margin: 0;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1280px;
+  grid-template-rows: 664px 50px 600px;
+  background-color: white;
+  margin: 0;
+  position: relative;
+  gap: 0px 0px;
+}
+.Bild {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.content {
+  grid-area: 2 / 1 / 4 / 2;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.aktionen {
+  display: grid;
+  grid-template-columns: repeat(3, 33.3333333%);
+  grid-template-rows: repeat(2, 300px);
+  gap: 0px 0px;
+  padding-left: 30px;
+  padding-right: 30px;
+  grid-template-areas:
+    "aktion1 aktion2 aktion3"
+    "aktion4 aktion5 aktion6";
+  grid-area: 3 / 1 / 4 / 2;
+}
+.aktion1 {
+  grid-area: aktion1;
+  text-align: center;
+}
+.aktion2 {
+  grid-area: aktion2;
+  text-align: center;
+}
+.aktion3 {
+  grid-area: aktion3;
+  text-align: center;
+}
+.aktion4 {
+  grid-area: aktion4;
+  text-align: center;
+}
+.aktion5 {
+  grid-area: aktion5;
+  text-align: center;
+}
+.aktion6 {
+  grid-area: aktion6;
+  text-align: center;
+}
+/* SECTION HOME */
+#home {
+  height: 852px !important;
+}
+/* Slider */
+video.full {
+  width: 1280px;
+  position: absolute;
+  object-fit: cover;
+  transition: all 1.2s linear;
+  display: block;
+}
+.video1 {
+  opacity: 1;
+}
+.video2 {
+  opacity: 0;
+}
+.video3 {
+  opacity: 0;
+}
+.video4 {
+  opacity: 0;
+}
+.video5 {
+  opacity: 0;
+}
+.video6 {
+  opacity: 0;
+}
+/* SECTION WIR-UEBER-UNS */
+#wir-ueber-uns {
+  height: 100% !important;
+  display: flex;
+}
+.sectionwir-ueber-uns::before {
+  display: block;
+  content: " ";
+  margin-top: -80px;
+  height: 80px;
+  visibility: hidden;
+  pointer-events: none;
+}
+/* SECTION AKTIONEN */
+#aktionen {
+  height: 100% !important;
+  display: flex;
+}
+.sectionaktionen::before {
+  display: block;
+  content: " ";
+  margin-top: -80px;
+  height: 80px;
+  visibility: hidden;
+  pointer-events: none;
+}
+#aktionenbild {
+  display: block;
+}
+.aktionenicons {
+  width: 200px;
+  display: block;
+  margin: auto;
+  vertical-align: middle;
+}
+.aktionenicons:hover {
+  background-color: #f6bc60;
+  transition: 0.25s;
+}
+/* SECTION TERMINVEREINBARUNG */
+#terminvereinbarung {
+  height: 100% !important;
+  display: flex;
+}
+.sectionterminvereinbarung::before {
+  display: block;
+  content: " ";
+  margin-top: -80px;
+  height: 80px;
+  visibility: hidden;
+  pointer-events: none;
+}
+#terminvereinbarungbild {
+  display: block;
+}
+form {
+  text-align: center;
+	margin-top: 2em
+}
+label {
+  position: absolute;
+  margin: 0 60px;
+}
+textarea {
+  resize: none;
+  margin: 25px 60px;
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input {
+  margin-top: 20px;
+  width: 40%;
+  padding: 12px 20px;
+  margin: 25px 60px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+#anliegen {
+  width: 90%;
+  height: 200px;
+}
+#absenden {
+  width: 90%;
+  background-color: #59A5D8;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#absenden:hover {
+  background-color: #0078b7;
+  transition: all 0.15s;
+}
+.contentterminvereinbarung {
+  display: inline-block;
+}
+/* SECTION INFOS */
+#infos {
+  height: 100% !important;
+  display: flex;
+  z-index: -5;
+  position: relative;
+  background-color: darkblue;
+}
+.sectioninfos::before {
+  display: block;
+  content: " ";
+  margin-top: -80px;
+  height: 80px;
+  visibility: hidden;
+  pointer-events: none;
+}
+#infosbild2 {
+	float: right;
+	height: 610px;
+	bottom: 0;
+}
+#map {
+	bottom: -5.4em;
+	float: left;
+	position: relative;
+	margin: 0;
+	z-index: 99;
+}
+/* MAIN ENDE */
+/* FOOTER */
+footer {
+  background-color: #90E0EF;
+  display: grid;
+  grid-template-columns: 440px 200px 640px;
+  grid-template-rows: 500px;
+  gap: 0px 0px;
+  grid-template-areas: ". .";
+  border-top-style: solid;
+  border-top-width: 1.25px;
+  box-shadow: 0px -2.5px 5px rgba(0, 0, 0, 0.2);
+}
+h3.footertext {
+  font-size: 1.2rem;
+  font-family: 'Saira', sans-serif !important;
+  font-weight: 400;
+  color: black;
+}
+h4.footertext {
+  font-family: 'Saira', sans-serif !important;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+/* IMPRESSUM */
+#impressum {
+  line-height: 1.5rem;
+  font-family: "Saira", sans-serif !important;
+  font-size: 1rem;
+  text-align: left;
+  padding: 40px 20px 40px 50px;
+  height: 100%;
+  font-weight: 400;
+}
+.impressumlink {
+  text-decoration: underline;
+  color: black;
+  display: inline;
+}
+.impressumlink:hover {
+  text-decoration: none;
+  color: #343a40;
+}
+/* DATENSCHUTZ */
+#datenschutz {
+  font-size: 0.8rem;
+  color: #003552;
+  font-weight: 400;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+#footerfloor {
+  border-top-style: solid;
+  border-top-width: 1.25px;
+  box-shadow: 0px -2.5px 5px rgba(0, 0, 0, 0.2);
+  width: 1280px;
+  height: 50px;
+  background-color: #5AA5D9;
+}
+/* SOCIAL MEDIA */
+#fade {
+  position: relative;
+  display: block;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 30%;
+}
+#fade img {
+  position: absolute;
+  margin-top: 30%;
+  left: 0;
+  /* webkit, moz & o = browserunterstützung */
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+#fade img.bottom {
+  position: relative;
+  margin-top: 30%;
+}
+#fade img.top:hover {
+  opacity: 0;
+}
+#socialwrapper {
+  background-color: #9FE5F1;
+}
+/* BACKTOTOP */
+#backtotopwrapper {
+  background-color: #BFEEF6;
+}
+#backtotop {
+  margin-left: 44%;
+  margin-right: 56%;
+  margin-top: 1rem;
+  display: block;
+  opacity: 1;
+}
+#backtotop:hover {
+  opacity: 0.5;
+  transition: 0.3s;
+}
+#brillen {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  display: block;
+}
+.brille {
+	width: 642px;
+	position: relative;
+	left: -1px;
+}
+#videowrapper {
+		overflow: hidden;
+}
+/* EFFEKTE */
+/* Hover Effekt bei Navigation von https://github.com/IanLunn/Hover/blob/master/css/hover.css */
+.hvr-sweep-to-top {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-sweep-to-top::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #caf0f8;
+  /*f6bd60*/
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-sweep-to-top:hover, .hvr-sweep-to-top:focus, .hvr-sweep-to-top:active {
+  color: white !important;
+}
+.hvr-sweep-to-top:hover::before, .hvr-sweep-to-top:focus::before, .hvr-sweep-to-top:active::before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+}
+/* Hover Effekt Ende */
