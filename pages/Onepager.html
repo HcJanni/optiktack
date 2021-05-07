@@ -5,7 +5,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Saira:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link href="../style/style.css" rel="stylesheet" type="text/css">
-	      <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="../script/shrinking_header.js"></script>
 </head>
 
 <body id="test" class="blur">
@@ -26,7 +27,7 @@
     <!-- NAVIGATION ENDE --> 
     <!-- MAIN -->
 	  <main>
-    <div id="spacer"></div>
+	  <div id="spacer"></div>
     <!-- home section -->
     <section id="home" class="section sectionhome">
       <div id="sliderwrapper">
@@ -39,7 +40,8 @@
     <!-- wir-ueber-uns section -->
     <section id="wir-ueber-uns" class="section sectionwir-ueber-uns">
       <div class="grid-container">
-		  <div class="Bild" id="wir-ueber-unsbild"><img src="../images/Bild_5.png" width="1280px"></div>
+		  <div class="block"><img src="../images/Bild_5.jpg" data-speed="1" class="img-parallax"><h2></h2></div>
+		  <!--<div class="Bild" id="wir-ueber-unsbild"><img src="../images/Bild_5.png" width="1280px"></div>-->
           <div class="bildschrift"><h1>Wir über uns</h1></div>
           <div class="content">
             <h3> Damit Ihre Optik stimmt </h3>
@@ -56,7 +58,7 @@
     <!-- aktionen section -->
     <section id="aktionen" class="section sectionaktionen">
             <div class="grid-container">
-        <div class="Bild" id="aktionenbild"><img src="../images/Bild_19.png" width="1280px">
+        <div class="block"><img src="../images/Bild_19.jpg" data-speed="1" class="img-parallax"><h2></h2></div>
 <div class="bildschrift"><h1>Aktionen</h1></div>
   <div class="content"><h3> Damit Ihre Optik stimmt </h3></div>
   <div class="aktionen">
@@ -68,13 +70,13 @@
     <div class="aktion6"><img src="../images/info-circle-blue.png" class="aktionenicons">Lassen Sie sich beraten!</div>
   </div>
         </div>
-      </div>
+      
     </section>
     <!-- aktionen section ende --> 
     <!-- terminvereinbarung section -->
     <section id="terminvereinbarung" class="section section terminvereinbarung">
 		<div class="grid-container">
-		  <div class="Bild" id="terminvereinbarungbild"><img src="../images/Bild_9.png" width="1280px"></div>
+		  <div class="block"><img src="../images/Bild_9.jpg" data-speed="1" class="img-parallax"><h2></h2></div>
           <div class="bildschrift"><h1>Terminvereinbarung</h1></div>
           <div class="content contentterminvereinbarung">
             <h3> Vereinbaren Sie umgehend <b>einen Termin mit uns!</b><br>
@@ -100,7 +102,7 @@ Wir melden uns umgehend mit einem Terminvorschlag. </h3>
     <!-- infos section -->
     <section id="infos" class="section sectioninfos">
       <div class="grid-container">
-		  <div class="Bild" id="infosbild"><img src="../images/Bild_20.png" width="1280px"></div>
+		  <div class="block"><img src="../images/Bild_20.jpg" data-speed="1" class="img-parallax"><h2></h2></div>
           <div class="bildschrift"><h1>Infos</h1></div>
           <div class="content">
 			  <img src="../images/Bild_2.png" id="infosbild2">
@@ -116,6 +118,7 @@ Wir melden uns umgehend mit einem Terminvorschlag. </h3>
     <!-- infos section ende --> 
     <!-- MAIN ENDE --> 
 	  </main>
+    
     <!-- FOOTER -->
     <footer> 
       <!-- impressum -->
@@ -167,79 +170,9 @@ Wir melden uns umgehend mit einem Terminvorschlag. </h3>
 </body>
 
 <!-- Skripte -->
-<script>// SHRINKING HEADER EFFEKT beim scrollen von https://codepen.io/tomdurkin/pen/nvAjd
-
-$(function() {
-  var shrinkHeader = 50;
-  $(window).scroll(function() {
-    var scroll = getCurrentScroll();
-    if (scroll >= shrinkHeader) {
-      $('#navbar').addClass('shrink');
-    } else {
-      $('#navbar').removeClass('shrink');
-    }
-  });
-
-  function getCurrentScroll() {
-    return window.pageYOffset || document.documentElement.scrollTop;
-  }
-});</script>
-<script>// SMART NAVBAR / weiß, wo man auf der Seite ist von https://stackoverflow.com/questions/19697696/change-underline-of-active-nav-by-section, leicht verändert/angepasst
-
-$(document).ready(function() {
-
-  var navTop = $('#navbar').offset().top;
-  var navHeight = $('#navbar').height();
-  var windowH = $(window).height();
-
-  $('.section').height(windowH);
-
-  $(document).scroll(function() {
-    var st = $(this).scrollTop(); // überwacht wie weit man scrollt
-
-    if (window.scrollY <= 50) { // behebt kleinen Fehler beim ersten scrollen
-      element.classList.add("active");
-    }
-
-    $('.section').each(function(index, element) {
-      if (st + navHeight > $(this).offset().top && st + navHeight <= $(this).offset().top + $(this).height()) {
-        $(this).addClass('active');
-
-        var id = $(this).attr('id');
-        $('a[href="#' + id + '"]').parent('li').addClass('active');
-        // or $('#nav li:eq('+index+')').addClass('active');
-      } else {
-        $(this).removeClass('active');
-
-        var id = $(this).attr('id');
-        $('a[href="#' + id + '"]').parent('li').removeClass('active');
-        //or $('#nav li:eq('+index+')').removeClass('active');
-      }
-
-    });
-
-  });
-
-});
-</script>
-<script>// SMOOTH SCROLL
-$('a').click(function() {
-  var scrollziel = $(this).attr('href');
-  if (scrollziel == '#home') {
-    $('html, body').animate({
-      scrollTop: 0
-    }, 750); // Geschwindigkeit beim hochscrollen
-    return false;
-  } else {
-    $('html, body').animate({
-      scrollTop: $($(this).attr('href')).offset().top - 80
-    }, 750); // Geschwindigkeit beim runterscrollen
-    return false;
-  }
-});
-
-//
-</script>
+	<script src="../script/smart_navbar.js"></script>
+	<script src="../script/smooth_scroll.js"></script>
+	<script src="../script/parallax.js"></script>
 <script>
 
 //var video1 = document.getElementById('video1');
