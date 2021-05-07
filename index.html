@@ -6,47 +6,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Saira:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link href="../style/style.css" rel="stylesheet" type="text/css">
 	      <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js" type="text/javascript"></script>
-	<script>
-		// I know that the code could be better.
-// If you have some tips or improvement, please let me know.
-
-$('.img-parallax').each(function(){
-  var img = $(this);
-  var imgParent = $(this).parent();
-  function parallaxImg () {
-    var speed = img.data('speed');
-    var imgY = imgParent.offset().top;
-    var winY = $(this).scrollTop();
-    var winH = $(this).height();
-    var parentH = imgParent.innerHeight();
-
-
-    // The next pixel to show on screen      
-    var winBottom = winY + winH;
-
-    // If block is shown on screen
-    if (winBottom > imgY && winY < imgY + parentH) {
-      // Number of pixels shown after block appear
-      var imgBottom = ((winBottom - imgY) * speed);
-      // Max number of pixels until block disappear
-      var imgTop = winH + parentH;
-      // Porcentage between start showing until disappearing
-      var imgPercent = ((imgBottom / imgTop) * 100) + (50 - (speed * 50));
-    }
-    img.css({
-      top: imgPercent + '%',
-      transform: 'translate(-50%, -' + imgPercent + '%)'
-    });
-  }
-  $(document).on({
-    scroll: function () {
-      parallaxImg();
-    }, ready: function () {
-      parallaxImg();
-    }
-  });
-});
-	</script>
+	<script src=".../scripts/parallax" type="text/javascript"></script>
+	<script src=".../scripts/shrinking_header" type="text/javascript"></script>
+	<script src=".../scripts/smart_navbar" type="text/javascript"></script>
+	<script src=".../scripts/smooth_scroll" type="text/javascript"></script>
 </head>
 
 <body id="test" class="blur">
@@ -210,81 +173,6 @@ Wir melden uns umgehend mit einem Terminvorschlag. </h3>
 </div>
 <!-- container ende -->
 </body>
-
-<!-- Skripte -->
-<script>// SHRINKING HEADER EFFEKT beim scrollen von https://codepen.io/tomdurkin/pen/nvAjd
-
-$(function() {
-  var shrinkHeader = 50;
-  $(window).scroll(function() {
-    var scroll = getCurrentScroll();
-    if (scroll >= shrinkHeader) {
-      $('#navbar').addClass('shrink');
-    } else {
-      $('#navbar').removeClass('shrink');
-    }
-  });
-
-  function getCurrentScroll() {
-    return window.pageYOffset || document.documentElement.scrollTop;
-  }
-});</script>
-<script>// SMART NAVBAR / weiß, wo man auf der Seite ist von https://stackoverflow.com/questions/19697696/change-underline-of-active-nav-by-section, leicht verändert/angepasst
-
-$(document).ready(function() {
-
-  var navTop = $('#navbar').offset().top;
-  var navHeight = $('#navbar').height();
-  var windowH = $(window).height();
-
-  $('.section').height(windowH);
-
-  $(document).scroll(function() {
-    var st = $(this).scrollTop(); // überwacht wie weit man scrollt
-
-    if (window.scrollY <= 50) { // behebt kleinen Fehler beim ersten scrollen
-      element.classList.add("active");
-    }
-
-    $('.section').each(function(index, element) {
-      if (st + navHeight > $(this).offset().top && st + navHeight <= $(this).offset().top + $(this).height()) {
-        $(this).addClass('active');
-
-        var id = $(this).attr('id');
-        $('a[href="#' + id + '"]').parent('li').addClass('active');
-        // or $('#nav li:eq('+index+')').addClass('active');
-      } else {
-        $(this).removeClass('active');
-
-        var id = $(this).attr('id');
-        $('a[href="#' + id + '"]').parent('li').removeClass('active');
-        //or $('#nav li:eq('+index+')').removeClass('active');
-      }
-
-    });
-
-  });
-
-});
-</script>
-<script>// SMOOTH SCROLL
-$('a').click(function() {
-  var scrollziel = $(this).attr('href');
-  if (scrollziel == '#home') {
-    $('html, body').animate({
-      scrollTop: 0
-    }, 750); // Geschwindigkeit beim hochscrollen
-    return false;
-  } else {
-    $('html, body').animate({
-      scrollTop: $($(this).attr('href')).offset().top - 80
-    }, 750); // Geschwindigkeit beim runterscrollen
-    return false;
-  }
-});
-
-//
-</script>
 <script>
 
 //var video1 = document.getElementById('video1');
