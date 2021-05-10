@@ -247,30 +247,43 @@ p {
   height: 852px !important;
 }
 /* Slider */
-video.full {
-  width: 1280px;
-  position: absolute;
-  object-fit: cover;
-  transition: all 1.2s linear;
-  display: block;
+video{
+    width:100%;
+    height:100%;
+    position:absolute;
+    object-fit:cover;
+    transition: all 1.2s linear;
+    z-index: -10;
 }
-.video1 {
-  opacity: 1;
+
+.video1{
+    opacity:1;
 }
-.video2 {
-  opacity: 0;
+.video2{
+    opacity:0;
 }
-.video3 {
-  opacity: 0;
+.video3{
+    opacity:0;
 }
-.video4 {
-  opacity: 0;
+.video4{
+    opacity:0;
 }
-.video5 {
-  opacity: 0;
+.video5{
+    opacity:0;
 }
-.video6 {
-  opacity: 0;
+.video6{
+    opacity:0;
+}
+
+
+.imagenes{
+    opacity:0;
+    transition:opacity 2s;
+    width:100%;
+    height:100%;
+    position:absolute;
+    object-fit:cover;
+    z-index: -10;
 }
 /* SECTION WIR-UEBER-UNS */
 #wir-ueber-uns {
