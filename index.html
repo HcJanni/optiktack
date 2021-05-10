@@ -1,222 +1,595 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>OptikTack</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Saira:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link href="../style/style.css" rel="stylesheet" type="text/css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="../script/shrinking_header.js"></script>
-</head>
+@charset "utf-8";
+/*@import url('https://fonts.googleapis.com/css2?family=Armata&family=Changa:wght@200;300;400;500;600;700;800&family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Goldman:wght@400;700&family=Play:wght@400;700&family=Rajdhani:wght@300;400;500;600;700&family=Saira:wght@100;200;300;400;500;600;700;800;900&family=Sunflower:wght@300;500;700&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');*/
+/* CSS Document */
+/*font-family: 'Armata', sans-serif;
+font-family: 'Changa', sans-serif;
+font-family: 'Exo', sans-serif;
+font-family: 'Goldman', cursive;
+font-family: 'Play', sans-serif;
+font-family: 'Rajdhani', sans-serif;
+font-family: 'Saira', sans-serif;
+font-family: 'Sunflower', sans-serif;
+font-family: 'Tomorrow', sans-serif;*/
+/* ALLGEMEINES */
+* {
+  font-family: "Saira", "Roboto", Segoe UI, Helvetica Neue, Arial, sans-serif;
+  box-sizing: border-box;
+}
+#container {
+  max-width: 1280px;
+  margin: 0 auto;
+  overflow-x: hidden;
+	background-color: white;
+}
+body {
+  background-color: #d0d0d0;
+  margin: 128px 0 0 0;
+  /*background-image: url("https://i.postimg.cc/9M2xQYcm/Hintergrund.png")*/
+}
+wrapper {
+	min-height: 100%;
+	margin: 0;
+}
 
-<body id="test" class="blur">
-	<div id="container">
-  <!-- Für die Animaton am Anfang vom Laden der Seite -->
-  <div class="wrapper"> 
-    <!-- NAVIGATION -->
-    <nav id="navbar">  
-      <a href="#home" id="logo"><img src="https://i.postimg.cc/przxCGcx/Logo.png" class="logo"></a>
-      <ul>
-        <li class="hvr-sweep-to-top active"><a href="#home">Home</a></li>
-        <li class="hvr-sweep-to-top"><a href="#wir-ueber-uns">Wir über uns</a></li>
-        <li class="hvr-sweep-to-top"><a href="#aktionen">Aktionen</a></li>
-        <li class="hvr-sweep-to-top"><a href="#terminvereinbarung">Terminvereinbarung</a></li>
-        <li class="hvr-sweep-to-top"><a href="#infos">Infos</a></li>
-      </ul>
-    </nav>
-    <!-- NAVIGATION ENDE --> 
-    <!-- MAIN -->
-	  <main>
-	  <div id="spacer"></div>
-    <!-- home section -->
-    <section id="home" class="section sectionhome">
-      <div id="sliderwrapper">
-		  <video autoplay muted loop id="full" class="full">
-          <source src="../images/sliderfull.mp4" type="video/mp4">
-        </video>
-      </div>
-    </section>
-    <!-- home section ende --> 
-    <!-- wir-ueber-uns section -->
-    <section id="wir-ueber-uns" class="section sectionwir-ueber-uns">
-      <div class="grid-container">
-		  <div class="block"><img src="../images/Bild_5.jpg" data-speed="1" class="img-parallax"><h2></h2></div>
-		  <!--<div class="Bild" id="wir-ueber-unsbild"><img src="../images/Bild_5.png" width="1280px"></div>-->
-          <div class="bildschrift"><h1>Wir über uns</h1></div>
-          <div class="content">
-            <h3> Damit Ihre Optik stimmt </h3>
-            <h2> Optik Tack </h2>
-            <p> Bei Optik Tack in Aalen erwartet Sie exzellente Beratung in angenehmer Atmosphäre. Wir setzen all unsere handwerklich-technischen Fertigkeiten für Ihre Augen, fürs bessere Sehen ein. <br><br>
-              
-              Und jenen Kundinnen und Kunden, die sich nur schlecht damit abfinden können, ab jetzt ständig eine Brille tragen zu müssen, sagen wir: 
-              <b>Tragen Sie’s mit (modischer) Fassung!</b></p>
-          </div>
-        </div>
-    
-    </section>
-    <!-- wir-ueber-uns section ende --> 
-    <!-- aktionen section -->
-    <section id="aktionen" class="section sectionaktionen">
-            <div class="grid-container">
-        <div class="block"><img src="../images/Bild_19.jpg" data-speed="0.5" class="img-parallax"><h2></h2></div>
-<div class="bildschrift"><h1>Aktionen</h1></div>
-  <div class="content"><h3> Damit Ihre Optik stimmt </h3></div>
-  <div class="aktionen">
-    <div class="aktion1 tooltip"><img src="../images/discount-blue.png" class="aktionenicons"><span class="tooltiptext">Rabatte auf Sonnenbrillen für Groß und Klein</span></div>
-    <div class="aktion2"><img src="../images/puzzle-blue.png" class="aktionenicons">Sommerrätsel für Kinder und Erwachsene</div>
-    <div class="aktion3"><img src="../images/ticket-blue.png" class="aktionenicons">Gutscheine zu gewinnen</div>
-    <div class="aktion4"><img src="../images/tool-blue.png" class="aktionenicons">Schnelle Brillenreparatur</div>
-    <div class="aktion5"><img src="../images/eye-blue.png" class="aktionenicons">Verschenken Sie gute Sicht!</div>
-    <div class="aktion6"><img src="../images/info-circle-blue.png" class="aktionenicons">Lassen Sie sich beraten!</div>
-  </div>
-        </div>
-      
-    </section>
-    <!-- aktionen section ende --> 
-    <!-- terminvereinbarung section -->
-    <section id="terminvereinbarung" class="section section terminvereinbarung">
-		<div class="grid-container">
-		  <div class="block"><img src="../images/Bild_9.jpg" data-speed="1" class="img-parallax"><h2></h2></div>
-          <div class="bildschrift"><h1>Terminvereinbarung</h1></div>
-          <div class="content contentterminvereinbarung">
-            <h3> Vereinbaren Sie umgehend <b>einen Termin mit uns!</b><br>
-Wir melden uns umgehend mit einem Terminvorschlag. </h3>
-			  <form>
-				<label for="vname">Name</label>
-			  <input type="text" id="nname" name="Vorname">
-				  <label for="vname">Vorname</label>
-			  <input type="text" id="vname" name="Nachname" required><br>
-				    <label for="E-Mailadresse">E-Mailadresse</label>
-			  <input type="email" id="email" name="E-Mailadresse" required>
-				  <label for="Telefon">Telefon</label>
-			  <input type="tel" id="telefon" name="Telefon" required><br>
-				  <label for="Telefon">Ihr Anliegen in Kürze</label>
-			  <textarea type="text" id="anliegen" name="Anliegen" placeholder="(Brille, Kontaktlinsen, optometrische Messung, usw.)"></textarea>
-				  <input type="submit" id="absenden" required>
-				  <input type="datetime-local">
-			  </form>
-          </div>
-        </div>
-    </section>
-    <!-- terminvereinbarung section ende --> 
-    <!-- infos section -->
-    <section id="infos" class="section sectioninfos">
-      <div class="grid-container">
-		  <div class="block"><img src="../images/Bild_20.jpg" data-speed="2" class="img-parallax"><h2></h2></div>
-          <div class="bildschrift"><h1>Infos</h1></div>
-          <div class="content">
-			  <img src="../images/Bild_2.png" id="infosbild2">
-            <h2> Öffnungszeiten </h2>
-            <p> <b>Mo&ndash;Fr</b> 9 Uhr bis 18 Uhr <br><b>Sa</b> 9 Uhr bis 13.30 Uhr<br></p><br>
-              
-              <h2>Hier finden Sie uns</h2>
-			  <p>Mozartstraße 37, 73430 Aalen</p>
-			  <div class="google-maps" id="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.14885073084!2d10.069609115673604!3d48.836299379285315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47991b7b2bb80fff%3A0x4aaa10e84e32e0ec!2sMozartstra%C3%9Fe%2037%2C%2073430%20Aalen!5e0!3m2!1sde!2sde!4v1589960466041!5m2!1sde!2sde" width="580" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
-          </div>
-        </div>
-    </section>
-    <!-- infos section ende --> 
-    <!-- MAIN ENDE --> 
-	  </main>
-    
-    <!-- FOOTER -->
-    <footer> 
-      <!-- impressum -->
-      <div id="impressum">
-        <h3 class="footertext">Impressum</h3>
-        <h4 class="footertext">Optik Tack GmbH</h4>
-        <p class="footertext"> 
-          <!-- Icons von https://tablericons.com/ --> 
-          <!-- map Icon --> 
-          <img src="https://i.postimg.cc/02y75n0W/map-pin.png" alt="mapicon" width="16" height="16" class="impressumicon" style="position: relative; top: 0.2rem;"> Mozartstraße 37 <br>
-          <span style="margin-left:21px;">73430 Aalen</span> <br>
-          <br>
-          <!-- phone Icon --> 
-          <img src="https://i.postimg.cc/wjPXGNJW/phone.png" alt="phoneicon" width="16" height="16" class="impressumicon" style="position: relative; top: 0.1rem;"> Tel.: 0&thinsp;73&thinsp;61&thinsp;/&thinsp;12&thinsp;34&thinsp;51 <br>
-          <!-- at Icon --> 
-          <img src="https://i.postimg.cc/tJ5dSmtP/at.png" alt="aticon" width="16" height="16" class="impressumicon" style="position: relative; top: 0.2rem;"> <a href="mailto:" class="impressumlink">info@optik-tack.de</a><br>
-          <!-- bookmark Icon --> 
-          <img src="https://i.postimg.cc/T29PwXkG/bookmarks.png" alt="bookmarkicon" width="16" height="16" style="position: relative; top: 0.25rem;"> <a href="#home" class="impressumlink">www.optik-tack.de</a><br>
-        </p>
-        <p class="footertext"> Geschäftsführer: Anton Tack <br>
-          Amtsgericht Aalen <br>
-          Handelsregister Nr. XXX000XXX, <br>
-          Finanzamt Aalen <br>
-          USt.IdNr.: DE10111011 <br>
-        </p>
-      </div>
-      <!-- impressum ende --> 
-      <!-- social media -->
-      <div id="socialwrapper">
-        <div id="fade"> <a href="#home" class="socialmediaicon"><img src="https://i.postimg.cc/P5zTmkmf/brand-pinterestred.png" alt="Pinterestfade" width="75px" class="bottom"><img src="https://i.postimg.cc/mrg34Bjt/brand-pinterest.png" alt="Pinterest" width="75px" class="top"></a> <a href="#home" class="socialmediaicon"><img src="https://i.postimg.cc/0NK3pTMX/brand-instagramred.png" alt="Instagramfade" width="75px" class="bottom"><img src="https://i.postimg.cc/6qnnc3W1/brand-instagram.png" alt="Instagram" width="75px" class="top"></a> <a href="#home" class="socialmediaicon"><img src="https://i.postimg.cc/kgC8qK9j/brand-facebookred.png" alt="Facebookfade" width="75px" class="bottom"><img src="https://i.postimg.cc/Wbm0Jhfd/brand-facebook.png" alt="Facebook" width="75px" class="top"></a> </div>
-      </div>
-      <!-- social media ende --> 
-      <!-- back to top -->
-      <div id="backtotopwrapper"> 
-        <!-- back to top Icon --> 
-        <a href="#home" id="backtotop"> <img src="https://i.postimg.cc/7hgtxV1Y/arrow-up-circle.png" alt="backtotopicon" width="75" height="75"> </a><div id="videowrapper"><video autoplay muted loop id="brillen" class="brille">
-          <source src="../images/Brille_1.mp4" type="video/mp4"></video></div> </div>
-      <!-- back to top ende --> 
-      <!-- footer bottom -->
-      <div id="footerfloor">
-        <p id="datenschutz" class="footertext">Datenschutzhinweise gemäß EU-Datenschutz-Grundverordnung (DSGVO)</p>
-      </div>
-      <!-- footer bottom ende --> 
-    </footer>
-    <!-- FOOTER ENDE --> 
-  </div>
-</div>
-<!-- container ende -->
-</body>
+.block{
+  width: 100%;
+  height: 650px;
+  position: relative;
+  overflow: hidden;
+  font-size: 16px;
+}
+.block h2{
+  position: relative;
+  display: block;
+  text-align: center;
+  margin: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 5vw;
+  color: black;
+  font-weight: 400;
+}
+.img-parallax {
+  width: 1280px;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,0);
+  pointer-events: none
+}
+/* NAVIGATION */
+#navlinks {
+  margin: 0;
+}
+ul {
+  color: black;
+  list-style: none;
+  float: right;
+  margin-right: 1rem;
+  padding-top: 2.25%;
+}
+ul li {
+  display: inline-table;
+  margin-left: 0.25rem;
+  padding: 0.25rem;
+  border-bottom: 2px solid;
+  border-bottom-color: white;
+}
+ul li a {
+  color: black;
+  text-decoration: none;
+  padding: 0.6rem;
+}
+/*
+ul li a:hover {
+  color: white;
+  transition: 0.4s;
+  text-decoration: none;
+}*/
+#logo {
+  margin-left: 1rem;
+}
+.logo:hover {
+  opacity: 0.5;
+  transition: 0.3s;
+}
+/* Smart Navbar / weiß, wo man auf der Seite ist von https://stackoverflow.com/questions/19697696/change-underline-of-active-nav-by-section */
+#navbar.fix {
+  position: fixed;
+  top: 0;
+}
+#navbar li.active {
+  border-bottom: 2px solid;
+  border-bottom-color: #0077b6;
+  color: black !important;
+  /*f6bd60*/
+}
+#navbar li.active a {
+  /*color: #f6bd60 !important;*/
+  /*f6bd60*/
+}
+/* Smart Navbar Ende */
+/* fixed Navigation / Shrink Animation von https://codepen.io/malZiiirA/pen/cbfED?css-preprocessor=none */
+#navbar {
+  border-bottom-style: solid;
+  border-bottom-width: 1.25px;
+  box-shadow: 0px 2.5px 5px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  height: 128px;
+  transition: 0.32s;
+  position: fixed;
+  top: 0;
+  width: 1280px;
+  z-index: 5;
+}
+#navbar.shrink {
+  height: 80px;
+  line-height: 18px;
+}
+#navbar li {
+  font-size: 1.2rem;
+  font-weight: 450 !important;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+#navbar.shrink li {
+  font-size: 1.2rem;
+  margin-top: -30px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+#navbar img {
+  height: 128px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+#navbar.shrink img {
+  height: 80px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  margin: auto;
+}
+/* NAVIGATION ENDE */
+/* MAIN */
+.bildschrift {
+  position: absolute;
+  margin: 0;
+	z-index: 3;
+  left: 30px;
+  right: 0;
+  text-align: left;
+  top: 37%; /* Adjust this value to move the positioned div up and down */
+  color: #fff;
+  text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.16);
+  font-size: 75px;
+}
+h1 {
+  margin: 0;
+}
+h2 {
+  font-weight: 600;
+  color: #5AA5D9;
+  font-size: 50px;
+  margin: 0;
+}
+h3 {
+  font-weight: 600;
+  color: #0d0d0d;
+  font-size: 1.6em;
+  margin: 0;
+}
+p {
+  font-weight: 400;
+  color: #0d0d0d;
+  font-size: 1.2em;
+  margin: 0;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1280px;
+  grid-template-rows: 664px 50px 600px;
+  background-color: ;
+  margin: 0;
+  position: relative;
+  gap: 0px 0px;
+}
+.Bild {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.content {
+  grid-area: 2 / 1 / 4 / 2;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.aktionen {
+  display: grid;
+  grid-template-columns: repeat(3, 33.3333333%);
+  grid-template-rows: repeat(2, 300px);
+  gap: 0px 0px;
+  padding-left: 30px;
+  padding-right: 30px;
+  grid-template-areas:
+    "aktion1 aktion2 aktion3"
+    "aktion4 aktion5 aktion6";
+  grid-area: 3 / 1 / 4 / 2;
+}
+.aktion1 {
+  grid-area: aktion1;
+  text-align: center;
+}
+.aktion2 {
+  grid-area: aktion2;
+  text-align: center;
+}
+.aktion3 {
+  grid-area: aktion3;
+  text-align: center;
+}
+.aktion4 {
+  grid-area: aktion4;
+  text-align: center;
+}
+.aktion5 {
+  grid-area: aktion5;
+  text-align: center;
+}
+.aktion6 {
+  grid-area: aktion6;
+  text-align: center;
+}
+/* SECTION HOME */
+#home {
+  height: 852px !important;
+}
+/* Slider */
+video.full {
+  width: 1280px;
+  position: absolute;
+  object-fit: cover;
+  transition: all 1.2s linear;
+  display: block;
+}
+.video1 {
+  opacity: 1;
+}
+.video2 {
+  opacity: 0;
+}
+.video3 {
+  opacity: 0;
+}
+.video4 {
+  opacity: 0;
+}
+.video5 {
+  opacity: 0;
+}
+.video6 {
+  opacity: 0;
+}
+/* SECTION WIR-UEBER-UNS */
+#wir-ueber-uns {
+  height: 100% !important;
+  display: flex;
+}
+.sectionwir-ueber-uns::before {
+  display: block;
+  content: " ";
+  margin-top: -80px;
+  height: 80px;
+  visibility: hidden;
+  pointer-events: none;
+}
+/* SECTION AKTIONEN */
+#aktionen {
+  height: 100% !important;
+  display: flex;
+}
+.sectionaktionen::before {
+  display: block;
+  content: " ";
+  margin-top: -80px;
+  height: 80px;
+  visibility: hidden;
+  pointer-events: none;
+}
+#aktionenbild {
+  display: block;
+}
+.aktionenicons {
+  width: 200px;
+  display: block;
+  margin: auto;
+  vertical-align: middle;
+}
+.aktionenicons:hover {
+  background-color: #f6bc60;
+  transition: 0.25s;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
 
-<!-- Skripte -->
-	<script src="../script/smart_navbar.js"></script>
-	<script src="../script/smooth_scroll.js"></script>
-	<script src="../script/parallax.js"></script>
-<script>
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 15px 0px;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 25px;
+  left: 35%;
+  
+  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+  opacity: 0;
+  transition: opacity 1s;
+}
 
-//var video1 = document.getElementById('video1');
-//var video2 = document.getElementById('video2');
-//var video3 = document.getElementById('video3');
-//var video4 = document.getElementById('video4');
-//var video5 = document.getElementById('video5');
-//var video6 = document.getElementById('video6');
-
-//function imgTransition(){
-    //imagen1.style.opacity=0;
-    //video1.play();
-    //video1.style.opacity=1;
-//}
-//video1.onended = function(){
-    //video2.play();
-    //video1.style.opacity=0;
-    //video2.style.opacity=1;
-//}
-//video2.onended = function(){
-    //video3.play();
-    //video2.style.opacity=0;
-    //video3.style.opacity=1;
-//}
-//video3.onended = function(){
-    //video4.play();
-    //video3.style.opacity=0;
-    //video4.style.opacity=1;
-//}
-//video4.onended = function(){
-    //video5.play();
-    //video4.style.opacity=0;
-    //video5.style.opacity=1;
-//}
-//video5.onended = function(){
-    //video6.play();
-    //video5.style.opacity=0;
-    //video6.style.opacity=1;
-//}
-//video6.onended = function(){
-    //video1.play();
-    //video6.style.opacity=0;
-    //video1.style.opacity=1;
-//}
-
-</script>
-</html>
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+/* SECTION TERMINVEREINBARUNG */
+#terminvereinbarung {
+  height: 100% !important;
+  display: flex;
+}
+.sectionterminvereinbarung::before {
+  display: block;
+  content: " ";
+  margin-top: -80px;
+  height: 80px;
+  visibility: hidden;
+  pointer-events: none;
+}
+#terminvereinbarungbild {
+  display: block;
+}
+form {
+  text-align: center;
+	margin-top: 2em
+}
+label {
+  position: absolute;
+  margin: 0 60px;
+}
+textarea {
+  resize: none;
+  margin: 25px 60px;
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input {
+  margin-top: 20px;
+  width: 40%;
+  padding: 12px 20px;
+  margin: 25px 60px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+#anliegen {
+  width: 90%;
+  height: 200px;
+}
+#absenden {
+  width: 90%;
+  background-color: #59A5D8;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#absenden:hover {
+  background-color: #0078b7;
+  transition: all 0.15s;
+}
+.contentterminvereinbarung {
+  display: inline-block;
+}
+/* SECTION INFOS */
+#infos {
+  height: 100% !important;
+  display: flex;
+  z-index: 0;
+  position: relative;
+}
+.sectioninfos::before {
+  display: block;
+  content: " ";
+  margin-top: -80px;
+  height: 80px;
+  visibility: hidden;
+  pointer-events: none;
+}
+#infosbild2 {
+	float: right;
+	height: 610px;
+	bottom: 0;
+}
+#map {
+	bottom: -5.4em;
+	float: left;
+	position: relative;
+	margin: 0;
+	z-index: 99;
+}
+/* MAIN ENDE */
+/* FOOTER */
+footer {
+  background-color: #90E0EF;
+  display: grid;
+  grid-template-columns: 440px 200px 640px;
+  grid-template-rows: 500px;
+  gap: 0px 0px;
+  grid-template-areas: ". .";
+  border-top-style: solid;
+  border-top-width: 1.25px;
+  box-shadow: 0px -2.5px 5px rgba(0, 0, 0, 0.2);
+}
+h3.footertext {
+  font-size: 1.2rem;
+  font-family: 'Saira', sans-serif !important;
+  font-weight: 400;
+  color: black;
+}
+h4.footertext {
+  font-family: 'Saira', sans-serif !important;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+/* IMPRESSUM */
+#impressum {
+  line-height: 1.5rem;
+  font-family: "Saira", sans-serif !important;
+  font-size: 1rem;
+  text-align: left;
+  padding: 40px 20px 40px 50px;
+  height: 100%;
+  font-weight: 400;
+}
+.impressumlink {
+  text-decoration: underline;
+  color: black;
+  display: inline;
+}
+.impressumlink:hover {
+  text-decoration: none;
+  color: #343a40;
+}
+/* DATENSCHUTZ */
+#datenschutz {
+  font-size: 0.8rem;
+  color: #003552;
+  font-weight: 400;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+#footerfloor {
+  border-top-style: solid;
+  border-top-width: 1.25px;
+  box-shadow: 0px -2.5px 5px rgba(0, 0, 0, 0.2);
+  width: 1280px;
+  height: 50px;
+  background-color: #5AA5D9;
+}
+/* SOCIAL MEDIA */
+#fade {
+  position: relative;
+  display: block;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 30%;
+}
+#fade img {
+  position: absolute;
+  margin-top: 30%;
+  left: 0;
+  /* webkit, moz & o = browserunterstützung */
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+#fade img.bottom {
+  position: relative;
+  margin-top: 30%;
+}
+#fade img.top:hover {
+  opacity: 0;
+}
+#socialwrapper {
+  background-color: #9FE5F1;
+}
+/* BACKTOTOP */
+#backtotopwrapper {
+  background-color: #BFEEF6;
+}
+#backtotop {
+  margin-left: 44%;
+  margin-right: 56%;
+  margin-top: 1rem;
+  display: block;
+  opacity: 1;
+}
+#backtotop:hover {
+  opacity: 0.5;
+  transition: 0.3s;
+}
+#brillen {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  display: block;
+}
+.brille {
+	width: 642px;
+	position: relative;
+	left: -1px;
+}
+#videowrapper {
+		overflow: hidden;
+}
+/* EFFEKTE */
+/* Hover Effekt bei Navigation von https://github.com/IanLunn/Hover/blob/master/css/hover.css */
+.hvr-sweep-to-top {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-sweep-to-top::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #caf0f8;
+  /*f6bd60*/
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-sweep-to-top:hover, .hvr-sweep-to-top:focus, .hvr-sweep-to-top:active {
+  color: white !important;
+}
+.hvr-sweep-to-top:hover::before, .hvr-sweep-to-top:focus::before, .hvr-sweep-to-top:active::before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+}
+/* Hover Effekt Ende */
