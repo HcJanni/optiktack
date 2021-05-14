@@ -242,6 +242,21 @@ p {
   grid-area: aktion6;
   text-align: center;
 }
+.aktion1:hover ~ #aktion1 {
+    opacity: 1;;
+}
+
+#aktion1 {
+  position: relative;
+  opacity: 0;
+  background: #ccc;
+  top: 8px;
+  left: 50px;
+  height: 300px;
+  width: 200px;
+  text-align: center;
+  transition: 0.2s;
+}
 /* SECTION HOME */
 #home {
   height: 852px !important;
