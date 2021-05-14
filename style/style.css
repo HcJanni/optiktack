@@ -324,20 +324,26 @@ video{
   transition: 0.25s;
   border-radius: 25%;
 }
-.aktion1:hover ~ #aktion1 {
+.aktion1:hover ~ #b {
     opacity: 1;;
 }
 
-#aktion1 {
+.aktion1 {
+  width: 250px;
+
+}
+
+#b {
   position: relative;
+  top: -245px;
+  left: 250px;
   opacity: 0;
   background: #ccc;
-  top: 8px;
-  left: 50px;
-  height: 300px;
-  width: 200px;
+  height: 600px;
+  width: 400px;
   text-align: center;
   transition: 0.2s;
+  border-radius: 2%;
 }
 /* SECTION TERMINVEREINBARUNG */
 #terminvereinbarung {
