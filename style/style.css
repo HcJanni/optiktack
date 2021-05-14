@@ -322,7 +322,7 @@ video{
 .aktionenicons:hover {
   background-color: #f6bc60;
   transition: 0.25s;
-  border-radius: 50%;
+  border-radius: 25%;
 }
 .tooltip {
   position: relative;
