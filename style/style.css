@@ -328,14 +328,14 @@ video{
 }
 
 .aktion1 {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
 }
 
 #b {
   position: relative;
   top: -0;
-  left: 0;
+  left: 200px;
   opacity: 0;
   background: #ccc;
   height: 600px;
