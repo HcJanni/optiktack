@@ -193,7 +193,6 @@ p {
   display: grid;
   grid-template-columns: 1280px;
   grid-template-rows: 664px 50px 600px;
-  background-color: ;
   margin: 0;
   position: relative;
   gap: 0px 0px;
@@ -221,26 +220,32 @@ p {
 .aktion1 {
   grid-area: aktion1;
   text-align: center;
+	z-index: 1;
 }
 .aktion2 {
   grid-area: aktion2;
   text-align: center;
+	z-index: 1;
 }
 .aktion3 {
   grid-area: aktion3;
   text-align: center;
+	z-index: 1;
 }
 .aktion4 {
   grid-area: aktion4;
   text-align: center;
+	z-index: 1;
 }
 .aktion5 {
   grid-area: aktion5;
   text-align: center;
+	z-index: 1;
 }
 .aktion6 {
   grid-area: aktion6;
   text-align: center;
+	z-index: 1;
 }
 /* SECTION HOME */
 #home {
@@ -323,26 +328,18 @@ video{
   transition: 0.25s;
   border-radius: 25%;
 }
-.aktion1:hover ~ #b {
-    opacity: 1;;
+.aktion1:hover ~ #bgaktion1, .aktion2:hover ~ #bgaktion2, .aktion3:hover ~ #bgaktion3, .aktion4:hover ~ #bgaktion4, .aktion5:hover ~ #bgaktion5, .aktion6:hover ~ #bgaktion6  {
+	opacity: 0.1;
+	transition: 0.25s;
 }
-
-.aktion1 {
-  width: 200px;
-  height: 200px;
-}
-
-#b {
-  position: relative;
-  top: -400px;
-  left: 200px;
-  opacity: 0;
-  background: #ccc;
-  height: 600px;
-  width: 400px;
-  text-align: center;
-  transition: 0.2s;
-  border-radius: 2%;
+#bgaktion1, #bgaktion2, #bgaktion3, #bgaktion4, #bgaktion5, #bgaktion6 {
+	position: absolute;
+	top: 650px;
+	left: 0;
+	width: 1280px;
+	z-index: 0;
+	opacity: 0;
+	padding-top: 65px;
 }
 /* SECTION TERMINVEREINBARUNG */
 #terminvereinbarung {
