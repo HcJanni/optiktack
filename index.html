@@ -30,28 +30,12 @@
 	  <main>
 	  <div id="spacer"></div>
     <!-- home section -->
-    <section id="home" class="section sectionhome">
-      <div id="sliderwrapper">
-	 
-    <video autoplay muted id="video1" class="video1">
-        <source src="images/Komp 1.mp4" type="video/mp4">
+    <section id="home" class="section sectionhome">	 
+		<div id="animationwrap">
+    <video autoplay muted loop id="animation" class="animation">
+        <source src="images/slider full neuneuneunuenueu.mp4" type="video/mp4">
     </video>
-    <video muted id="video2" class="video2">
-        <source src="images/Komp 2.mp4" type="video/mp4">
-    </video>
-    <video muted id="video3" class="video3">
-        <source src="images/Komp 3.mp4" type="video/mp4">
-    </video>
-    <video muted id="video4" class="video4">
-        <source src="images/Komp 4.mp4" type="video/mp4">
-    </video>
-	    <video muted id="video5" class="video5">
-        <source src="images/Komp 5.mp4" type="video/mp4">
-    </video>
-	    <video muted id="video6" class="video6">
-        <source src="images/Komp 6.mp4" type="video/mp4">
-    </video>
-      </div>
+			</div>
     </section>
     <!-- home section ende --> 
     <!-- wir-ueber-uns section -->
@@ -67,9 +51,14 @@
               
               Und jenen Kundinnen und Kunden, die sich nur schlecht damit abfinden können, ab jetzt ständig eine Brille tragen zu müssen, sagen wir: 
               <b>Tragen Sie’s mit (modischer) Fassung!</b></p>
+			  <div id="fassungen">
+	<div class="fassung1"><img src="images/Bild_15.png"><div class="hoverdisappear"><img src="brille1.png" width="200px" class="brillen"></div></div>
+	<div class="fassung1"><img src="images/Bild_16.png"><div class="hoverdisappear"><img src="brille2.png" width="200px" class="brillen"></div></div>
+	<div class="fassung1"><img src="images/Bild_17.png"><div class="hoverdisappear"><img src="brille3.png" width="200px" class="brillen"></div></div>
+	<div class="fassung2"><img src="images/Bild_14.png"><div class="hoverdisappear"><img src="brille4.png" width="200px" class="brillen"></div></div>
+	</div>
           </div>
-        </div>
-    
+		</div>
     </section>
     <!-- wir-ueber-uns section ende --> 
     <!-- aktionen section -->
@@ -79,18 +68,12 @@
 <div class="bildschrift"><h1>Aktionen</h1></div>
   <div class="content"><h3> Damit Ihre Optik stimmt </h3></div>
   <div class="aktionen">
-    <div class="aktion1"><img src="images/discount.svg" class="aktionenicons">Rabatte auf Sonnenbrillen für Groß und Klein</div>
+    <div class="aktion1"><div class="iconwrap"><img src="images/discount-red.svg" class="aktioneniconshover"><img src="images/discount.svg" class="aktionenicons"></div><p class="aktion1">Rabatte auf Sonnenbrillen für Groß und Klein</p></div>
     <div class="aktion2"><img src="images/puzzle.svg" class="aktionenicons">Sommerrätsel für Kinder und Erwachsene</div>
     <div class="aktion3"><img src="images/ticket.svg" class="aktionenicons">Gutscheine zu gewinnen</div>
     <div class="aktion4"><img src="images/tool.svg" class="aktionenicons">Schnelle Brillenreparatur</div>
     <div class="aktion5"><img src="images/eye.svg" class="aktionenicons">Verschenken Sie gute Sicht!</div>
     <div class="aktion6"><img src="images/info-circle.svg" class="aktionenicons">Lassen Sie sich beraten!</div>
-	  <img src="images/Bild_1.jpg" id="bgaktion1">
-	  <img src="images/Bild_2.jpg" id="bgaktion2">
-	  <img src="images/Bild_3.jpg" id="bgaktion3">
-	  <img src="images/Bild_4.jpg" id="bgaktion4">
-	  <img src="images/Bild_5.jpg" id="bgaktion5">
-	  <img src="images/Bild_6.jpg" id="bgaktion6">
   </div>
         </div>
       
@@ -150,15 +133,15 @@ Wir melden uns umgehend mit einem Terminvorschlag. </h3>
         <p class="footertext"> 
           <!-- Icons von https://tablericons.com/ --> 
           <!-- map Icon --> 
-          <img src="https://i.postimg.cc/02y75n0W/map-pin.png" alt="mapicon" width="16" height="16" class="impressumicon" style="position: relative; top: 0.2rem;"> Mozartstraße 37 <br>
+          <img src="images/map-pin.svg" alt="mapicon" width="16" height="16" class="impressumicon" style="position: relative; top: 0.2rem;"> Mozartstraße 37 <br>
           <span style="margin-left:21px;">73430 Aalen</span> <br>
           <br>
           <!-- phone Icon --> 
-          <img src="https://i.postimg.cc/wjPXGNJW/phone.png" alt="phoneicon" width="16" height="16" class="impressumicon" style="position: relative; top: 0.1rem;"> Tel.: 0&thinsp;73&thinsp;61&thinsp;/&thinsp;12&thinsp;34&thinsp;51 <br>
+          <img src="images/phone.svg" alt="phoneicon" width="16" height="16" class="impressumicon" style="position: relative; top: 0.1rem;"> Tel.: 0&thinsp;73&thinsp;61&thinsp;/&thinsp;12&thinsp;34&thinsp;51 <br>
           <!-- at Icon --> 
-          <img src="https://i.postimg.cc/tJ5dSmtP/at.png" alt="aticon" width="16" height="16" class="impressumicon" style="position: relative; top: 0.2rem;"> <a href="mailto:" class="impressumlink">info@optik-tack.de</a><br>
+          <img src="images/at.svg" alt="aticon" width="16" height="16" class="impressumicon" style="position: relative; top: 0.2rem;"> <a href="mailto:" class="impressumlink">info@optik-tack.de</a><br>
           <!-- bookmark Icon --> 
-          <img src="https://i.postimg.cc/T29PwXkG/bookmarks.png" alt="bookmarkicon" width="16" height="16" style="position: relative; top: 0.25rem;"> <a href="#home" class="impressumlink">www.optik-tack.de</a><br>
+          <img src="images/bookmarks.svg" alt="bookmarkicon" width="16" height="16" style="position: relative; top: 0.25rem;"> <a href="#home" class="impressumlink">www.optik-tack.de</a><br>
         </p>
         <p class="footertext"> Geschäftsführer: Anton Tack <br>
           Amtsgericht Aalen <br>
@@ -170,13 +153,13 @@ Wir melden uns umgehend mit einem Terminvorschlag. </h3>
       <!-- impressum ende --> 
       <!-- social media -->
       <div id="socialwrapper">
-        <div id="fade"> <a href="#home" class="socialmediaicon"><img src="https://i.postimg.cc/P5zTmkmf/brand-pinterestred.png" alt="Pinterestfade" width="75px" class="bottom"><img src="https://i.postimg.cc/mrg34Bjt/brand-pinterest.png" alt="Pinterest" width="75px" class="top"></a> <a href="#home" class="socialmediaicon"><img src="https://i.postimg.cc/0NK3pTMX/brand-instagramred.png" alt="Instagramfade" width="75px" class="bottom"><img src="https://i.postimg.cc/6qnnc3W1/brand-instagram.png" alt="Instagram" width="75px" class="top"></a> <a href="#home" class="socialmediaicon"><img src="https://i.postimg.cc/kgC8qK9j/brand-facebookred.png" alt="Facebookfade" width="75px" class="bottom"><img src="https://i.postimg.cc/Wbm0Jhfd/brand-facebook.png" alt="Facebook" width="75px" class="top"></a> </div>
+        <div id="fade"> <a href="#home" class="socialmediaicon"><img src="https://i.postimg.cc/P5zTmkmf/brand-pinterestred.png" alt="Pinterestfade" width="75px" class="bottom"><img src="images/brand-pinterest.svg" alt="Pinterest" width="75px" class="top"></a> <a href="#home" class="socialmediaicon"><img src="https://i.postimg.cc/0NK3pTMX/brand-instagramred.png" alt="Instagramfade" width="75px" class="bottom"><img src="images/brand-instagram.svg" alt="Instagram" width="75px" class="top"></a> <a href="#home" class="socialmediaicon"><img src="https://i.postimg.cc/kgC8qK9j/brand-facebookred.png" alt="Facebookfade" width="75px" class="bottom"><img src="images/brand-facebook.svg" alt="Facebook" width="75px" class="top"></a> </div>
       </div>
       <!-- social media ende --> 
       <!-- back to top -->
       <div id="backtotopwrapper"> 
         <!-- back to top Icon --> 
-        <a href="#home" id="backtotop"> <img src="https://i.postimg.cc/7hgtxV1Y/arrow-up-circle.png" alt="backtotopicon" width="75" height="75"> </a><div id="videowrapper"><video autoplay muted loop id="brillen" class="brille">
+        <a href="#home" id="backtotop"> <img src="images/arrow-up-circle.svg" alt="backtotopicon" width="75" height="75"> </a><div id="videowrapper"><video autoplay muted loop id="brillen" class="brille">
           <source src="images/Brille_1.mp4" type="video/mp4"></video></div> </div>
       <!-- back to top ende --> 
       <!-- footer bottom -->

@@ -221,6 +221,11 @@ p {
   grid-area: aktion1;
   text-align: center;
 	z-index: 1;
+	position: relative;
+	font-weight: 400;
+  color: #0d0d0d;
+  font-size: 1em;
+  margin: 0;
 }
 .aktion2 {
   grid-area: aktion2;
@@ -258,36 +263,7 @@ video{
   object-fit: cover;
   transition: all 1.2s linear;
   display: block;
-}
-
-.video1{
-    opacity:1;
-}
-.video2{
-    opacity:0;
-}
-.video3{
-    opacity:0;
-}
-.video4{
-    opacity:0;
-}
-.video5{
-    opacity:0;
-}
-.video6{
-    opacity:0;
-}
-
-.imagenes{
-    opacity:0;
-    transition:opacity 2s;
-    width:100%;
-    height:100%;
-    position:absolute;
-    object-fit:cover;
-    z-index: -10;
-}
+} 
 /* SECTION WIR-UEBER-UNS */
 #wir-ueber-uns {
   height: 100% !important;
@@ -300,6 +276,46 @@ video{
   height: 80px;
   visibility: hidden;
   pointer-events: none;
+}
+.fassung1 {
+	background-color: red;
+	display: inline-block;
+	width: 294px;
+	height: 380px;
+	margin-top: 10px;
+	margin-right: 10px;
+	position: relative;
+}
+.fassung2 {
+	background-color: red;
+	display: inline-block;
+	width: 294px;
+	height: 380px;
+	margin-top: 10px;
+	position: relative;
+}
+.brillen {
+	position: absolute;
+	top: 100px;
+	left: 50px;
+	z-index: 2;
+	opacity: 1;
+	-webkit-transform:rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.hoverdisappear {
+	transition: 0.25s;
+	background-color: #fff;
+	height: 380px;
+	width: 300px;
+	position: absolute;
+	top: 0;
+}
+.hoverdisappear:hover {
+	opacity: 0;
 }
 /* SECTION AKTIONEN */
 #aktionen {
@@ -322,24 +338,28 @@ video{
   display: block;
   margin: auto;
   vertical-align: middle;
+	z-index: 1;
+	  transition: 0.25s;
 }
-.aktionenicons:hover {
-  background-color: #f6bc60;
-  transition: 0.25s;
-  border-radius: 25%;
-}
-.aktion1:hover ~ #bgaktion1, .aktion2:hover ~ #bgaktion2, .aktion3:hover ~ #bgaktion3, .aktion4:hover ~ #bgaktion4, .aktion5:hover ~ #bgaktion5, .aktion6:hover ~ #bgaktion6  {
-	opacity: 0.1;
-	transition: 0.25s;
-}
-#bgaktion1, #bgaktion2, #bgaktion3, #bgaktion4, #bgaktion5, #bgaktion6 {
+
+.aktioneniconshover {
 	position: absolute;
-	top: 650px;
-	left: 0;
-	width: 1280px;
-	z-index: 0;
+top: -100px;
+left: 0;
+right: 0;
+bottom: 0;
+margin: auto;
+	width: 200px;
+	display: block;
 	opacity: 0;
-	padding-top: 65px;
+	z-index: 1;
+		  transition: 0.25s;
+}
+
+.aktioneniconshover:hover {
+	opacity: 1;
+	border-radius: 25%;
+  background-color: #5AA5D9;
 }
 /* SECTION TERMINVEREINBARUNG */
 #terminvereinbarung {
