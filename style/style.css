@@ -231,26 +231,51 @@ p {
   grid-area: aktion2;
   text-align: center;
 	z-index: 1;
+	position: relative;
+	font-weight: 400;
+  color: #0d0d0d;
+  font-size: 1em;
+  margin: 0;
 }
 .aktion3 {
   grid-area: aktion3;
   text-align: center;
 	z-index: 1;
+	position: relative;
+	font-weight: 400;
+  color: #0d0d0d;
+  font-size: 1em;
+  margin: 0;
 }
 .aktion4 {
   grid-area: aktion4;
   text-align: center;
 	z-index: 1;
+	position: relative;
+	font-weight: 400;
+  color: #0d0d0d;
+  font-size: 1em;
+  margin: 0;
 }
 .aktion5 {
   grid-area: aktion5;
   text-align: center;
 	z-index: 1;
+	position: relative;
+	font-weight: 400;
+  color: #0d0d0d;
+  font-size: 1em;
+  margin: 0;
 }
 .aktion6 {
   grid-area: aktion6;
   text-align: center;
 	z-index: 1;
+	position: relative;
+	font-weight: 400;
+  color: #0d0d0d;
+  font-size: 1em;
+  margin: 0;
 }
 /* SECTION HOME */
 #home {
