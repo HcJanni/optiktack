@@ -366,24 +366,11 @@ video{
 	  transition: 0.25s;
 }
 
-.aktioneniconshover {
-	position: absolute;
-top: -100px;
-left: 0;
-right: 0;
-bottom: 0;
-margin: auto;
-	width: 200px;
-	display: block;
-	opacity: 0;
-	z-index: 1;
-		  transition: 0.25s;
-}
-
-.aktioneniconshover:hover {
+.aktionenicons:hover {
 	opacity: 1;
 	border-radius: 25%;
-  background-color: #5AA5D9;
+	background-color: #a55a26;
+	filter: invert(100%)
 }
 /* SECTION TERMINVEREINBARUNG */
 #terminvereinbarung {
