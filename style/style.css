@@ -551,17 +551,17 @@ h4.footertext {
   margin-top: 30%;
   left: 0;
   /* webkit, moz & o = browserunterstützung */
-  -webkit-transition: opacity 0.2s ease-in-out;
-  -moz-transition: opacity 0.2s ease-in-out;
-  -o-transition: opacity 0.2s ease-in-out;
-  transition: opacity 0.2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
-#fade img.bottom {
+#fade img.invert {
   position: relative;
   margin-top: 30%;
 }
-#fade img.top:hover {
-  opacity: 0;
+#fade img:hover {
+  filter: invert(100%);
 }
 #socialwrapper {
   background-color: #9FE5F1;
@@ -576,10 +576,10 @@ h4.footertext {
   margin-top: 1rem;
   display: block;
   opacity: 1;
+  transition: 0.2s;
 }
 #backtotop:hover {
-  opacity: 0.5;
-  transition: 0.3s;
+  filter: invert(100%);
 }
 #brillen {
   margin-left: auto;
